@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Naija Music 247</title>  
+<style>
+body {
+Width:100%;
+height:100%;
+background-image: url("https://i.gifer.com/XnHb.gif");    
+}
+
+iframe{
+    opacity:0;
+    
+}
+button{
+font-size:50px;    
+}    
+</style>  
+</head>
+    
+  <body onload="myinterval();" >
+    <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+    <div id="player"></div>
+
+    <script>
+      // 2. This code loads the IFrame Player API code asynchronously.
+var A;      
+var point;
+var seconds;
+var minutes;
+var hours;
+function inter(){
+
+var date = new Date;
+
+var second = date.getSeconds();
+var minute = date.getMinutes();
+var hour = date.getHours();
+point=minutes*60+seconds;
+
+seconds=second;
+minutes=minute;
+hours=hour;
+
+if(minutes==0 && seconds==0) {
+onPlayerReady();    
+}
+
+}
+function myinterval(){
+    setInterval(inter,1);
+}
+
+function list(h,id){
+
+
+if(hours==h){
+A=id;
+
+}
+      
+} 
+
+                  
+                                  
+        
+      var b;
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+      
+        player = new YT.Player('player', {
+          height: '1',
+          width: '1',
+          
+                  
+                      
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onMute
+          }
+           
+        });
+      }
+
+      // 4. The API will call this function when the video player is ready.
+      function onMute() {
+      
+             if(player.getPlayerState() == 0){
+            
+            player.playVideo();
+                    
+                
+                }
+                }
+      
+      function onPlayerReady() {
+      
+      list(1,"uKOllFHZb3s");
+      list(2,"aq_WW9JKohI");
+      list(3,"Sg5Dl0bVR-I");
+      list(4,"mqAPU2_Ufro");
+      list(5,"pjM-IHbUbMQ");
+      list(6,"t-qhFu59CaE");
+      list(7,"13hkVcsyHmk");
+      list(8,"EPUmdoaGafU");
+      list(9,"jB6-YxqZbA0");
+      list(10,"l7qUPSgbV-A");
+      list(11,"GxmQkBCC06E");
+      list(12,"dswiA-imSVk");
+      list(13,"uKOllFHZb3s");
+      list(14,"aq_WW9JKohI");
+      list(15,"Sg5Dl0bVR-I");
+      list(16,"mqAPU2_Ufro");
+      list(17,"pjM-IHbUbMQ");
+      list(18,"t-qhFu59CaE");
+      list(19,"13hkVcsyHmk");
+      list(20,"EPUmdoaGafU");
+      list(21,"jB6-YxqZbA0");
+      list(22,"l7qUPSgbV-A");
+      list(23,"GxmQkBCC06E");
+      list(0,"dswiA-imSVk");
+      
+player.loadVideoById({videoId:A,
+               'startSeconds':point,
+        //       'endSeconds': 3600,
+              
+               'suggestedQuality': 'large'});
+             player.playVideo(); 
+             
+
+      }
+      
+
+   
+    </script>
+  <button  onclick="onPlayerReady();">◀️PLAY▶️</button>
+  </body>
+</html>
