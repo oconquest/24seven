@@ -19,7 +19,31 @@
 
 </script>
 
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
 
+<script>
+
+  var OneSignal = window.OneSignal || [];
+
+  OneSignal.push(function() {
+
+    OneSignal.init({
+
+      appId: "2e9b3734-df9b-4482-8170-e67478660470",
+
+      autoRegister: false,
+
+      notifyButton: {
+
+        enable: true,
+
+      },
+
+    });
+
+  });
+
+</script>
     
 
         <title>Live Music</title>
