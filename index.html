@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120416377-1"></script>
+
+<script>
+
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag(){dataLayer.push(arguments);}
+
+  gtag('js', new Date());
+
+  gtag('config', 'UA-120416377-1');
+
+</script>
+
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+
+<script>
+
+  var OneSignal = window.OneSignal || [];
+
+  OneSignal.push(function() {
+
+    OneSignal.init({
+
+      appId: "2e9b3734-df9b-4482-8170-e67478660470",
+
+      autoRegister: false,
+
+      notifyButton: {
+
+        enable: true,
+
+      },
+
+    });
+
+  });
+
+</script>
+
+    
+
+        <title>Live Music</title>
+
+        
+
+        <style>
+
+            
+
+          html,body{
+
+Width:700px;  
+
+Height:700px; 
+
+background-color:#white; 
+
+padding:0;
+
+margin:0;
+
+}
+
+#middle {
+
+background-color:white;
+
+Width:100%;
+
+height:576px;
+
+position:fixed;   
+
+font-size:5vw; 
+
+color:white; 
+
+top:241px;
+
+left:0px;
+
+}
+
+#top {
+
+background-color:orange;
+
+Width:100%;
+
+height:240px;
+
+opacity:1;
+
+position:fixed;   
+
+font-size:8vw;  
+
+top:0px;
+
+left:0px;
+
+}
+
+#genrelist {
+
+background-color:orange;
+
+Width:100%;
+
+height:240px;
+
+opacity:1;
+
+position:fixed;   
+
+font-size:8vw;  
+
+display:none;
+
+top:0px;
+
+left:0px;
+
+}
+
+#genres{
+
+    
+
+background-color:#FFFFE0;
+
+position:fixed;
+
+Width:100%;
+
+Height:100%;
+
+position:fixed; 
+
+top:241px;
+
+display:none;
+
+left:0px;
+
+font-size:6vw;
+
+    
+
+}
+
+iframe{
+
+    opacity:0;
+
+    
+
+}      
+
+            
+
+        </style>
+
+      <script src="https://oconquest.github.io/musicjs/"></script>  
+
+    </head>
+
+    
+
+    <body onload="myinterval();">
+
+<script>
+
+  window.fbAsyncInit = function() {
+
+    FB.init({
+
+      appId      : '{270909753591385}',
+
+      cookie     : true,
+
+      xfbml      : true,
+
+      version    : '{v3.2}'
+
+    });
+
+      
+
+    FB.AppEvents.logPageView();   
+
+      
+
+  };
+
+  (function(d, s, id){
+
+     var js, fjs = d.getElementsByTagName(s)[0];
+
+     if (d.getElementById(id)) {return;}
+
+     js = d.createElement(s); js.id = id;
+
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+
+     fjs.parentNode.insertBefore(js, fjs);
+
+   }(document, 'script', 'facebook-jssdk'));
+
+</script>
+
+    
+
+<div id="home"> 
+
+  
+
+<div id="top">
+
+<div id="genrediv" style="color:white; position:fixed; top:42px; left:0px;"><b>💯Non-stop music🎶</b></div> 
+
+</div>     
+
+<div id="middle">
+
+ <div id="player"></div>
+
+<script>(function(d, s, id) {
+
+  var js, fjs = d.getElementsByTagName(s)[0];
+
+  if (d.getElementById(id)) return;
+
+  js = d.createElement(s); js.id = id;
+
+  js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2&appId=270909753591385&autoLogAppEvents=1';
+
+  fjs.parentNode.insertBefore(js, fjs);
+
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div style="position:fixed; top:300px; left:340px;color:black; font-size:6vw; opacity:0.7;">Now playing</div> 
+
+<div style="position:fixed; top:460px; left:340px;color:Red; font-size:5vw; opacity:0.7;" id="musictype">Afrobeat</div> 
+
+<div style="position:fixed; top:620px;  font-size:10vw; opacity:1;   width:100%; height:200px; background-color:FFFAFA;" onclick="openmenu();"><div style="position:fixed; left:410px; width:360px; height:50px;"><b>▶️</b></div></div>
+
+</div>
+
+</div>
+
+<div id="genrelist">
+
+<div id="genrediv" style="color:white; position:fixed; top:82px;"><b>🔘Genre</b></div> 
+
+<div style="position:fixed; top:82px; right:0px;" onclick="closemenu();">❎</div>
+
+</div> 
+
+<div id="genres">
+
+<div style="width:100%; height:64px; position:fixed; top:316px; left:20px; opacity:0.5;" onclick="alist();">
+
+Afrobeat<hr>
+
+</div> 
+
+<div style="width:100%; height:64px; position:fixed; top:440px; left:20px; opacity:0.5;" onclick="rlist();">
+
+Rap/Hip-Hop<hr>
+
+</div> 
+
+<div style="width:100%; height:64px; position:fixed; top:540px; left:20px; opacity:0.5;" onclick="elist();">
+
+Epic Music<hr>
+
+</div> 
+
+<div style="width:100%px; height:64px; position:fixed; top:640px; left:20px; opacity:0.5;" onclick="glist();">
+
+Gospel Music<hr>
+
+</div> 
+
+<div style="width:100%; height:64px; position:fixed; top:740px; left:20px; opacity:0.5;" onclick="gilist();">
+
+Gospel Music Instrumental<hr>
+
+</div> 
+
+</div>  
+
+  <script type="text/javascript" style="position:fixed; top:840px; left:0px;">
+
+amzn_assoc_placement = "adunit0";
+
+amzn_assoc_tracking_id = "listnkem-20";
+
+amzn_assoc_ad_mode = "manual";
+
+amzn_assoc_ad_type = "smart";
+
+amzn_assoc_marketplace = "amazon";
+
+amzn_assoc_region = "US";
+
+amzn_assoc_linkid = "633be71ca943733fb8afde13ee421db1";
+
+amzn_assoc_asins = "B07HFYZY7D,B0779JHWSK,B06XSJV5B9,B00UMVVUOC";
+
+amzn_assoc_design = "in_content";
+
+</script>
+
+<script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>      
+
+<div class="fb-comments"></div>
+
+    </body>
+
+</html>
