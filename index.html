@@ -228,7 +228,21 @@ iframe{
  <div id="player"></div>
 
     <script>
+<div id="fb-root"></div>
 
+<script>(function(d, s, id) {
+
+  var js, fjs = d.getElementsByTagName(s)[0];
+
+  if (d.getElementById(id)) return;
+
+  js = d.createElement(s); js.id = id;
+
+  js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2&appId=270909753591385&autoLogAppEvents=1';
+
+  fjs.parentNode.insertBefore(js, fjs);
+
+}(document, 'script', 'facebook-jssdk'));</script>
     
 
       // 2. This code loads the IFrame Player API code asynchronously.
@@ -998,7 +1012,7 @@ amzn_assoc_design = "in_content";
 </script>
 
 <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script>      
-
+<div class="fb-comments"></div>
     </body>
 
 </html>
