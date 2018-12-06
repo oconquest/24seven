@@ -178,7 +178,21 @@ iframe{
     
 
     <body onload="myinterval();">
+<div id="fb-root"></div>
 
+<script>(function(d, s, id) {
+
+  var js, fjs = d.getElementsByTagName(s)[0];
+
+  if (d.getElementById(id)) return;
+
+  js = d.createElement(s); js.id = id;
+
+  js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2&appId=270909753591385&autoLogAppEvents=1';
+
+  fjs.parentNode.insertBefore(js, fjs);
+
+}(document, 'script', 'facebook-jssdk'));</script>
 <script>
 
   window.fbAsyncInit = function() {
@@ -302,7 +316,7 @@ Gospel Music Instrumental<hr>
 </div>  
 
 
-<div class="fb-comments"></div>
+<div class="fb-comments" data-href="https://ngmusic24seven.ml" data-width="300px" data-numposts="500"></div>
 
     </body>
 
